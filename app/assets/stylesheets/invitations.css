@@ -1,0 +1,201 @@
+:root {
+    --violet-color: #8762D9;
+    --violet-opacity-color: #8762D922;  
+    --blue-color: #151B26; 
+    --vert1-color: #1FA698; 
+    --vert2-color: #44F2A1; 
+    --vert2-opacity-color: #44F2A122; 
+    --gris-color : #F2F2F2;
+    --gris2-color : #a1a1a1;
+    --white-color : #FFF;
+    --white-blue-color : #F4F7FA;
+    --black-color : #010101;
+    --border-color : #01010122;
+    --danger-color : #f28585;
+    --blue2-color : rgb(81, 131, 224);
+  }
+
+
+.invitations-page {
+    padding: 40px 50px;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+    @media screen and (max-width: 1024px) {
+        padding: 30px;
+    }
+    @media screen and (max-width: 700px) {
+        padding: 30px 7px;
+    }
+
+}
+
+.invitations-page .invitation-page-header {
+    @media screen and (max-width: 700px) {
+        padding: 0 10px;
+    }
+}
+
+.invitations-page .new-invitation {
+    width:calc(100%);
+    outline: none;
+    text-decoration: none;
+    padding: 20px 15px;
+    display: flex;
+    background-color: var(--violet-opacity-color);
+    align-items: center;
+    border-radius: 0.4rem;
+    margin: auto;
+    margin-top: 20px;
+    @media screen and (max-width: 700px) {
+        width: calc(100% - 10px);
+        padding: 10px;;
+    }
+}
+.invitations-page .new-invitation .icon-container {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    color: #FFF;
+    background-color: var(--violet-color);
+    margin-right: 10px;
+    font-size: 16px;
+    border-radius: 0.4rem;
+    font-weight: bolder;
+}
+.invitations-page .new-invitation  .title {
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+
+}
+.invitations-page .invitations-list{
+    overflow: hidden;
+    width: fit-content;
+    margin: auto;
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr); /* Creates 4 equal-width columns */
+    grid-gap: 10px;
+
+    
+    @media screen and (max-width: 1280px) {
+        grid-template-columns: repeat(1, 1fr);
+    };
+    @media screen and (max-width : 767px) {
+        width: 100%;
+    }
+}
+
+.invitations-page .no-list {
+    height: 400px;
+    margin: auto;
+    min-width: 90vw;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--blue-color);
+}
+
+.invitations-page .no-list  .icon {
+    font-size: 32px;
+}
+
+
+
+/* ------------------------------------
+        header page 
+  -------------------------------- */
+
+  .header-page {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .header-page .header-right {
+    display: flex;
+    align-items: center;
+  }
+  
+  .header-page .header-right .search-icon-container {
+    width: 40px;
+    height: 40px;
+    background-color: var(--violet-color);
+    color: #fff;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+  }
+  
+  .header-page .header-right .search-icon-container:hover {
+    cursor: pointer;
+    background-color: #fff;
+    border: 2px solid var(--violet-color);
+    color: var(--violet-color);
+  }
+  
+  .header-page .header-right input {
+    padding: 12px 7px;
+    border: 1px solid var(--violet-color);
+    outline: none;
+    font-size: 12px;
+    border-radius: 0.4rem;
+    width: 250px;
+    font-weight: bold;
+  }
+  
+  .header-page .header-right input::placeholder {
+    color: #00000055;
+    letter-spacing: 1px;
+  }
+  
+  .header-page .header-right input:focus {
+    border: 2px solid var(--violet-color);
+    outline: none;
+  }
+  
+  .header-page .title {
+    font-size: 26px;
+    font-weight: bold;
+    color: var(--blue-color);
+  }
+  
+  .header-page .descr {
+    font-size: 14px;
+    font-weight: bold;
+    color: #01010166;
+  }
+  
+  .header-page .refresh-icon-container {
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
+    color: var(--violet-color);
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    border: 1px solid var(--violet-color);
+  }
+  .header-page .refresh-icon-container:hover {
+    cursor: pointer;
+    background-color: var(--violet-color);
+    color: #fff;
+  }
+
+  a {
+    text-decoration: none;
+    outline: none;
+  }

@@ -1,0 +1,186 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Your Page Title</title>
+  <%= stylesheet_link_tag 'profile', media: 'all' %>
+  <!-- Other meta tags, stylesheets, or scripts specific to this view -->
+</head>
+<body>
+  <%= render "partials/navbar" %>
+        <div class="profile-page">
+        <div class="header">
+          <div class="title">Modifier Profile</div>
+        </div>
+        <div class="content">
+          <div class="new-profile-card">
+          <% if flash[:alert].present? %>
+            <div class="error-generale">
+                <%= flash[:alert] %>
+            </div>
+        <% end %>
+
+            <form class="pay-part-form"  action="<%= sellers_path %>" method="post" >
+
+
+              <%= hidden_field_tag :id, session[:user_id] %>
+              <div class="pay-part-form-container">
+                <div class="form-header">
+                  <div class="title">
+                    <div class="icon-container">
+                      <i class="fa-solid fa-user"></i>
+                    </div>
+                    <span>Informations personnels</span>
+                  </div>
+
+                
+                </div>
+
+                <div class="field-container" >
+                  <label class="label" htmlFor={field.name}>
+                    nom
+                  </label>
+
+                  <input
+                    class="field"
+                    type="text"
+                    id="name"
+                    name="name"
+                    value="<%= @seller.name %>"
+                  />
+                </div>
+                <div class="field-container" >
+                  <label class="label" htmlFor={field.name}>
+                    Prénom
+                  </label>
+
+                  <input
+                    class="field"
+                    type="text"
+                    id="firstName"
+                    name="firstName"
+                     value="<%= @seller.firstName %>"
+                  />
+                </div>
+
+                                <div class="field-container" >
+                  <label class="label" htmlFor={field.name}>
+                    Email
+                  </label>
+
+                  <input
+                    class="field"
+                    type="text"
+                    id="email"
+                    name="email"
+                     value="<%= @seller.email %>"
+                  />
+                </div>
+
+                <div class="field-container" >
+                  <label class="label" htmlFor={field.name}>
+                    Numéro de téléphone
+                  </label>
+
+                  <input
+                    class="field"
+                    type="number"
+                    id="phoneNumber"
+                    name="phoneNumber"
+                    value="<%= @seller.phoneNumber %>"
+                  />
+                </div>
+                <div class="field-container" >
+                  <label class="label" htmlFor={field.name}>
+                    RIB / RIP
+                  </label>
+
+                  <input
+                    class="field"
+                    type="text"
+                    id="rib"
+                    name="rib"
+                    value="<%= @seller.rib %>"
+                  />
+                </div>
+
+
+                <div class="form-header">
+                  <div class="title">
+                    <div class="icon-container">
+                      <i class="fa-solid fa-business-time"></i>
+                    </div>
+                    <span>Informations sur l'entreprise</span>
+                  </div>
+
+                  <div class="sub-title"></div>
+                </div>
+
+                <div class="field-container" >
+                  <label class="label" htmlFor={field.name}>
+                    Nom de l'entreprise
+                  </label>
+
+                  <input
+                    class="field"
+                    type="text"
+                    id="businessName"
+                    name="businessName"
+                    value="<%= @seller.businessName %>"
+                  />
+                </div>
+
+                <div class="field-container" >
+                  <label class="label" htmlFor={field.name}>
+                    Description
+                  </label>
+
+                  <input
+                    class="field"
+                    type="text"
+                    id="description"
+                    name="description"
+                    value="<%= @seller.description %>"
+                  />
+                </div>
+                <div class="field-container" >
+                  <label class="label" htmlFor={field.name}>
+                    Magasin wilaya
+                  </label>
+
+                  <input
+                    class="field"
+                    type="text"
+                    id="wilaya"
+                    name="wilaya"
+                    value="<%= @seller.wilaya %>"
+                  />
+                </div>
+                 <div class="field-container" >
+                  <label class="label" htmlFor={field.name}>
+                    Adresse du magasin
+                  </label>
+
+                  <input
+                    class="field"
+                    type="text"
+                    id="location"
+                    name="location"
+                    value="<%= @seller.location %>"
+                  />
+                </div>
+               
+              <button class="submit-form" type="submit">
+                Sauvgarder
+              </button>
+
+
+              </div>
+
+
+            </form>
+          </div>
+        </div>
+      </div>
+</body>
+</html>

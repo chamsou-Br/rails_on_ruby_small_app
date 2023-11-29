@@ -1,0 +1,143 @@
+
+.invitation-page {
+    width: 100%;
+    padding: 30px 40px;
+    box-sizing: border-box;
+    @media screen and (max-width: 1024px) {
+        padding: 30px;
+    }
+    @media screen and (max-width: 700px) {
+        padding: 30px 0px;
+    }
+}
+
+
+.invitation-page .invitation-page-content{
+    display: flex;
+    flex-direction: column ;
+    align-items: center;
+    margin-top: 40px;
+    width: 100%;
+}
+
+.invitation-page .invitation-page-header {
+    width: calc(100%);
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    @media screen and (max-width: 700px) {
+        padding: 0px 10px;
+    }
+
+}
+
+.invitation-page .invitation-page-content .transaction-list {
+    width: 100%;
+    border: 1px solid var(--border-color);
+    border-radius: 0.3rem;
+    font-size: 14px;
+    @media screen and (max-width : 1024px) {
+        font-size: 12px;
+    }
+    @media screen and (max-width : 700px) {
+        font-size: 10px;
+    }
+    @media screen and (max-width : 500px) {
+        font-size: 8px;
+    }
+}
+
+.invitation-page .transaction-list .header {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     background-color: var(--white-blue-color);
+     color: var(--blue-color);
+     padding: 15px 20px;
+}
+
+.invitation-page .transaction-list .header span {
+    width: calc(20%);
+   
+}
+.invitation-page .transaction-list .header span:nth-child(5) {
+    @media screen and (max-width : 767px) {
+        display: none;
+    }
+}
+
+.invitation-page .invitation-page-content .transaction-list .transaction-item {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    border-bottom: 0.1px solid var(--gris-color);
+}
+
+.invitation-page .invitation-page-content .transaction-list .transaction-item:hover {
+    cursor: pointer;
+    background-color: var(--white-blue-color);
+}
+
+.invitation-page .invitation-page-content .transaction-list .transaction-item span {
+    width: 20%;
+}
+
+.invitation-page .invitation-page-content .transaction-list .transaction-item span:nth-child(5) {
+    @media screen and (max-width : 767px) {
+        display: none;
+    }
+}
+
+
+
+
+
+.invitation-page .invitation-page-content .transaction-list-header {
+    display: flex;
+    overflow-x: auto;
+    width: 100%;
+    margin: 40px 0 ;
+    @media screen and (max-width: 968px) {
+        padding-bottom: 20px;
+            margin: 0 60px;
+            font-size: 14px;
+    }
+    @media screen and (max-width : 500px) {
+        font-size: 8px;
+    }
+
+
+}
+
+.invitation-page .invitation-page-content .transaction-list-header::-webkit-scrollbar {
+    width: 10px; 
+    height: 3px;/* Width of the scrollbar */
+  }
+  
+  /* Customize the scrollbar thumb (the draggable part) */
+  .invitation-page .invitation-page-content .transaction-list-header::-webkit-scrollbar-thumb {
+    background: var(--blue-color); /* Color of the thumb */
+  }
+  
+  /* Customize the scrollbar track on hover */
+  .invitation-page .invitation-page-content .transaction-list-header::-webkit-scrollbar-track:hover {
+    background: #999;
+  }
+
+.invitation-page .invitation-page-content .transaction-list-header > div {
+    justify-content: flex-start;
+    margin-right: 20px;
+    padding: 15px 10px;
+    cursor: pointer;
+    width: fit-content;
+    min-width: fit-content;
+
+}
+
+
+
+.invitation-page .invitation-page-content .transaction-list-header > div.active {
+    border-bottom: 2px solid var(--vert2-color);
+    color: var(--vert2-color);
+} 

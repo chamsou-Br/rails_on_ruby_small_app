@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Your Page Title</title>
+  <%= stylesheet_link_tag 'invitations', media: 'all' %>
+  <!-- Other meta tags, stylesheets, or scripts specific to this view -->
+</head>
+<body>
+<%= render "partials/navbar" %>
+  <div class='invitations-page'>
+      <div class='invitation-page-header'>
+          <div class="header-page">
+      <div class="header-left">
+        <div class="title">Announces</div>
+        <div class="descr">List de tous les anounces</div>
+      </div>
+
+
+        <div class="header-right">
+          <div id="search-icon-container" class="search-icon-container">
+            +
+          </div>
+          <div class="search-bar-container">
+            <input
+              name="search"
+              placeholder="Search uuid"
+              id="searchInput"
+            />
+          </div>
+        </div>
+    </div>
+      </div>
+      <div>
+      <a href="<%= new_path %>" class='new-invitation' >
+        <div class='icon-container'>
+          +
+        </div>
+        <div onClick={navigateToNewInvitation} class='title' >Ajouter une nouvelle Invitation !</div>
+      </a>
+      </div>
+      <div class='invitations-list'>
+                  <% @invitations.each do |it| %>
+                  <a href="/invitations/<%= it.id %> ">
+                <%= render "partials/invitationCard", inv: it %>
+                 </a>
+                 <% end %>
+                
+
+
+      </div>  
+    </div>
+</body>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const searchInput = document.getElementById("searchInput");
+    const searchDiv = document.getElementById("search-icon-container");
+
+    // Add an event listener to the div
+    searchDiv.addEventListener("click", function () {
+      const inputValue = searchInput.value;
+
+      // Update the window location based on the input value
+      window.location.href = "/invitations/" + inputValue;
+    });
+  });
+</script>
+</html>

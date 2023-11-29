@@ -1,0 +1,29 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  uuid: MyString
+  delivery_place: MyString
+  delivery_type: MyString
+  delivery_price: 9.99
+  delivery_date: 2023-11-19 13:53:40
+  state: MyString
+  outcome: MyString
+  activation_key: MyString
+  payment_date: 2023-11-19 13:53:40
+  certified_delivery: false
+  certified_company: MyString
+  invitation: one
+
+two:
+  uuid: MyString
+  delivery_place: MyString
+  delivery_type: MyString
+  delivery_price: 9.99
+  delivery_date: 2023-11-19 13:53:40
+  state: MyString
+  outcome: MyString
+  activation_key: MyString
+  payment_date: 2023-11-19 13:53:40
+  certified_delivery: false
+  certified_company: MyString
+  invitation: two

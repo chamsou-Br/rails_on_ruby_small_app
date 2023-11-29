@@ -1,0 +1,347 @@
+:root {
+  --violet-color: #8762D9;
+  --violet-opacity-color: #8762D922;  
+  --blue-color: #151B26; 
+  --vert1-color: #1FA698; 
+  --vert2-color: #44F2A1; 
+  --vert2-opacity-color: #44F2A122; 
+  --gris-color : #F2F2F2;
+  --gris2-color : #a1a1a1;
+  --white-color : #FFF;
+  --white-blue-color : #F4F7FA;
+  --black-color : #010101;
+  --border-color : #01010122;
+  --danger-color : #f28585;
+  --blue2-color : rgb(81, 131, 224);
+}
+
+
+.login-page {
+  font-family: cursive;
+    width: 80vw;
+    height: 80vh;
+    background-color: #fff;
+    box-shadow: 5px 5px 15px 0 rgba(0, 0, 0, 0.2);
+    overflow-x: hidden;
+    display: flex;
+    justify-content: start;
+    flex-direction: row-reverse;
+    align-items: start;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    @media screen and (max-width: 1024px) {
+        width: 90vw;
+    };
+    @media screen and (max-width : 567px) {
+        width: 100vw;
+        height: 100vh;
+        padding: 20px 0;
+    }
+}
+
+
+
+.login-page .login-picture {
+    height:100%;
+    background-color: #F4F7FA;
+    width: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.6rem;
+    @media screen and (max-width: 768px) {
+        display: none;
+    };
+}
+
+.login-page .login-picture img {
+    width:300px;
+    object-fit: contain;
+    @media screen and (max-width: 1024px) {
+        width: 200px;
+    };
+    
+}
+
+.login-page .login-content {
+    flex: 1;
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+
+.login-content .body {
+    padding: 0 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    @media screen and (max-width: 575px) {
+        padding: 5px;
+    };
+}
+
+.login-content .body .title {
+    font-size: 26px;
+    font-weight: bold;
+    color: var(--blue-color);
+    margin-bottom: 5px;
+    @media screen and (max-width: 576px) {
+        font-size: 22px;
+    };
+}
+
+.login-content  .pp {
+    display: none;
+    width: 80px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    @media screen and (max-width: 767px) {
+        display: block;
+    };
+}
+
+.login-content .body .sub-title {
+    font-size: 12px;
+    font-weight: bold;
+    color: var(--blue-color);
+    margin-top: 15px;
+}
+.login-content .body .sub-title:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.login-content .body  .error {
+    color: #e35555;
+    font-size: 10px;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.pay-part-form-container {
+    margin-bottom: 10px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5px;
+  
+    @media screen and (max-width: 550px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+  .pay-part-form-container.vertical {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  
+  .pay-part-form-container .field-container {
+    margin: 10px 0;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .pay-part-form-container .field-container:nth-child(2n + 1) {
+    margin-right: 10px;
+    @media screen and (max-width: 550px) {
+      margin-right: 0;
+    }
+  }
+  
+  .pay-part-form-container.vertical .field-container:nth-child(2n + 1) {
+      margin-right: 0;
+  }
+  
+  .pay-part-form-container .field-container .label {
+    font-size: 14px;
+    font-weight: bold;
+    color: var(--blue-color);
+    margin-bottom: 5px;
+  }
+  
+  .pay-part-form-container .field-container .field {
+
+    outline: none;
+    font-size: 14px;
+    padding: 13px 10px;
+    font-weight: bold;
+    border: none;
+    border-radius: 0.2rem;
+    min-width: 300px;
+    max-width: 380px;
+    border: 0.5px solid var(--border-color);
+    @media screen and (max-width: 767px) {
+      max-width: 350px;
+      min-width: 250px
+    }
+    @media screen and (max-width: 400px) {
+      width: 90vw;
+    } 
+  }
+  
+  .pay-part-form-container .field-container .field option {
+    font-size: 16px;
+  }
+  .pay-part-form-container .field-container .field::placeholder {
+    font-size: 14px;
+    color: #01010133;
+  }
+  
+  .pay-part-form-container .field-container .field:focus {
+    border: 2px solid var(--violet-color);
+  }
+  
+  .pay-part-form-container .field-container .error {
+    color: #e35555;
+    font-size: 12px;
+    font-weight: bold;
+    margin-top: 5px;
+  }
+  
+  .pay-part-form .submit-form {
+    background-color: var(--violet-color);
+    padding: 15px;
+    text-align: center;
+    height: fit-content;
+    font-size: 14px;
+    padding: 13px 10px;
+    font-weight: bold;
+    border: none;
+    border-radius: 0.2rem;
+    min-width: 300px;
+    max-width: 350px;
+    color: #fff;
+    margin-top: 20px;
+    @media screen and (max-width: 767px) {
+      max-width: 350px;
+      min-width: 250px;
+      margin-top: 10px;
+    }
+    @media screen and (max-width: 550px) {
+      width: 100%;
+    } 
+    @media screen and (max-width: 400px) {
+      width: 90vw;
+      min-width: 0px;
+    }
+  }
+  .pay-part-form button:hover{
+    opacity: 0.7;
+  }
+  
+  .pay-part-form.disabled button {
+    opacity: 0.2;
+  }
+  
+  .pay-part-form button.back {
+    background-color: var(--border-color);
+    padding: 15px;
+    text-align: center;
+    height: fit-content;
+    font-size: 14px;
+    padding: 13px 10px;
+    font-weight: bold;
+    border: none;
+    border-radius: 0.2rem;
+    width: 100px;
+    color: var(--blue-color);
+    margin-top: 20px;
+    margin-right: 10px;
+  }
+  
+  .field {
+    outline: none;
+    font-size: 14px;
+    padding: 13px 10px;
+    font-weight: bold;
+    border: none;
+    border-radius: 0.2rem;
+    min-width: 300px;
+    border: 1px solid var(--border-color);
+    @media screen and (max-width: 767px) {
+      max-width: 350px;
+    }
+    @media screen and (max-width: 400px) {
+      width: 95vw;
+    }
+  }
+  
+  .field::placeholder {
+    font-size: 14px;
+    color: #01010133;
+  }
+  
+  .field:focus {
+    border: 2px solid var(--violet-color);
+  }
+  
+  .pay-part-form .checkboxes {
+    margin-top: 5px;
+  }
+  
+  .pay-part-form .checkboxes .checkbox {
+    margin-right: 20px;
+  }
+  
+  .pay-part-form .checkboxes .checkbox span {
+    margin-left: 3px;
+    font-size: 16px;
+    
+  }
+  
+  .pay-part-form .form-header{
+    display: block;
+    grid-column: span 2
+  
+  }
+  
+  
+  .pay-part-form .title {
+    display: flex;
+    align-items:center ;
+    justify-content: start;
+    gap: 10px;
+    margin-top: 20px;
+    @media screen and (max-width : 765px) {
+      margin-bottom: 0;
+  }
+  
+  
+  }
+  
+  .pay-part-form .title .icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+    background-color: var(--violet-opacity-color);
+    color: var(--violet-color);
+    border-radius: 0.3rem;
+    font-size: 22px;
+  }
+  
+  .pay-part-form  .title span {
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--blue-color);
+  }
+  
+  .pay-part-form  .sub-title {
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: normal;
+    color: var(--blue-color);
+    width: 90%;
+    line-height: 15px;
+    @media screen and (max-width : 765px) {
+      margin-bottom: 0;
+  }
+  
+  }

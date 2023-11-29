@@ -1,0 +1,305 @@
+/* navbar */
+:root {
+    --violet-color: #8762D9;
+    --violet-opacity-color: #8762D922;  
+    --blue-color: #151B26; 
+    --vert1-color: #1FA698; 
+    --vert2-color: #44F2A1; 
+    --vert2-opacity-color: #44F2A122; 
+    --gris-color : #F2F2F2;
+    --gris2-color : #a1a1a1;
+    --white-color : #FFF;
+    --white-blue-color : #F4F7FA;
+    --black-color : #010101;
+    --border-color : #01010122;
+    --danger-color : #f28585;
+    --blue2-color : rgb(81, 131, 224);
+  }
+
+.navigation {
+    z-index: 30;
+    height: 30px;
+    width: calc( 100% - 3rem ) ;
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 1.5rem 1rem;
+    background-color: #fff;
+    color: black;
+    border-bottom: 1px solid var(--border-color);
+    box-sizing: content-box;
+    background-color: var(--white-blue-color);
+  }
+  .brand-name {
+    text-decoration: none;
+    color: black;
+    font-size: 1.3rem;
+    margin-left: 1rem;
+  }
+  
+  .brand-name img {
+    width: 100px;
+    z-index: 10;
+  }
+  
+  .navigation-menu {
+    margin-left: auto;
+  }
+  
+  .navigation-menu ul {
+    display: flex;
+    padding: 0;
+  }
+  .navigation-menu li {
+    list-style-type: none;
+    margin: 0 1rem;
+  }
+  .navigation-menu li a {
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    color: var(--blue-color);
+    font-weight: bold;
+  }
+  
+  .navigation-menu ul {
+    display: flex;
+    padding: 0;
+  }
+  .navigation-menu li {
+    /* // removes default disc bullet for li tags and applies margin to left & right side */
+    list-style-type: none;
+    margin: 0 1rem;
+  }
+  .navigation-menu li a {
+    /* increases the surface area of the anchor tag to span more than just the anchor text */
+    text-decoration: none;
+    display: block;
+    width: 100%;
+  }
+  
+  .navigation-menu li a:hover {
+    color: var(--vert2-color);
+    cursor: pointer;
+  }
+  
+  .hamburger {
+    display: None;
+  }
+  
+  @media screen and (max-width: 768px) {
+  
+    .navigation {
+      padding: 1.5rem 10px;
+    }
+    .hamburger {
+      display: block;
+      position: absolute;
+      right: 10px;
+      top: 15px;
+    }
+  
+  
+    .navigation-menu ul {
+      position: absolute;
+      top: 40px;
+      left: 0;
+      flex-direction: column;
+      width: 100%;
+      height: calc(100vh - 0px);
+      background-color: white;
+      border-top: 1px solid black;
+    }
+    .navigation-menu li {
+      text-align: center;
+      margin: 0;
+    }
+    .navigation-menu li a {
+      color: black;
+      /* // increases the surface area of the anchor tag to span the full width of the menu */
+      width: 100%;
+      padding: 1.5rem 0;
+    }
+    .navigation-menu li:hover {
+      background-color: #eee;
+    }
+    .navigation-menu ul {
+      /* previous styles */
+      display: none;
+    }
+    .navigation-menu.expanded ul {
+      display: block;
+    }
+  }
+
+
+  /* mini Incitation card */
+
+  .mini-invitation-card {
+    background-color: #FFF;
+    max-width: 1200px;
+    width: 100%;
+    padding: 10px;
+    position: relative;
+    border-radius: 0.3rem;
+    display: flex;
+    border: 0.5px solid var(--border-color);
+    align-items: center;
+    cursor: pointer;
+    @media screen and (max-width : 500px) {
+        padding: 10px 5px;;
+    }
+}
+
+
+.mini-invitation-card .picture {
+    width: 220px;
+    height: 150px;
+    border-radius: 0.3rem;
+    overflow: hidden;
+    border: 1px solid  var(--border-color);
+    @media screen and (max-width : 767px) {
+        width: 20vw;
+        height: 15vw;
+    }
+    @media screen and (max-width : 500px) {
+        width: 20vw;
+        height: 20vw;
+    }
+
+}
+
+.mini-invitation-card .picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.mini-invitation-card .mini-invitation-card-infos {
+    flex: 1;;
+    margin: 0px 10px;
+    height: 120px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+
+    @media screen and (max-width : 767px) {
+        padding: 0;
+        margin: 5px 10px;
+    }
+}
+
+.mini-invitation-card .mini-invitation-card-infos.title {
+    display: flex;
+    align-items: center;
+}
+
+.mini-invitation-card .mini-invitation-card-infos .title span {
+    font-size: 22px;
+    font-weight: bold;
+    color: var(--blue-color);
+    margin-right: 10px;
+    @media screen and (max-width : 500px) {
+        font-size: 14px;
+    }
+}
+
+.mini-invitation-card .mini-invitation-card-infos .descr {
+    font-size: 14px;
+    color: #7b7b7b;
+    font-weight: normal;
+   margin-top: 3px;
+   overflow: hidden;
+}
+.mini-invitation-card .mini-invitation-card-infos .descr.descr-md {
+    display: block;
+    @media screen and (max-width : 500px) {
+        display: none;
+    }
+}
+.mini-invitation-card .mini-invitation-card-infos .descr.descr-sm {
+    display: none;
+    @media screen and (max-width : 500px) {
+        display: block;
+    }
+}
+
+.mini-invitation-card .mini-invitation-card-infos .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mini-invitation-card .mini-invitation-card-infos .info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    color: var(--blue-color);
+    font-weight: bold;
+    @media screen and (max-width : 767px) {
+        display: none;
+    }
+
+}
+
+.mini-invitation-card .mini-invitation-card-infos .price {
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--violet-color);
+    @media screen and (max-width : 500px) {
+        font-size: 12px;
+    }
+}
+
+
+
+.mini-invitation-card  .transactions-info {
+    display: flex;
+    width: 100%;
+    justify-content: start;
+}
+
+.mini-invitation-card  .transactions-info .transaction-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px 0;
+    margin-right: 20px;
+    
+
+}
+
+.mini-invitation-card  .transactions-info .transaction-info .number {
+    font-size: 18px;
+    font-weight: bold;
+  margin-top: 3px;
+}
+
+.mini-invitation-card  .transactions-info .transaction-info:nth-child(1) .number {
+    color: #EB904F;
+}
+
+.mini-invitation-card  .transactions-info .transaction-info:nth-child(2) .number {
+    color: #b7ec4d;
+}
+
+.mini-invitation-card  .transactions-info .transaction-info:nth-child(3) .number {
+    color: #44E46A;
+}
+
+.mini-invitation-card  .transactions-info .transaction-info:nth-child(4) .number {
+    color: #E84949;
+}
+
+.mini-invitation-card  .transactions-info .transaction-info .label {
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--blue-color);
+    margin-right: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} 
+
+  

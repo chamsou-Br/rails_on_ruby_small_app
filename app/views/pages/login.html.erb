@@ -1,0 +1,69 @@
+
+<!-- app/views/your_controller_name/your_view_name.html.erb -->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Your Page Title</title>
+  <%= stylesheet_link_tag 'login', media: 'all' %>
+  <!-- Other meta tags, stylesheets, or scripts specific to this view -->
+</head>
+<body>
+  <!-- Your page content -->
+  <div class="login-page">
+      <div class="login-picture">
+        <img src="<%= asset_path('PPP.png') %>" />
+      </div>
+      <div class="login-content">
+        <div class="body">
+          <div class="title">Bienvenue à pay part</div>
+          <div class="title">Connectez-vous pour continuer</div>
+          <div class="error"></div>
+          <form method="post" action="/login" class="pay-part-form">
+             <div class="pay-part-form-container vertical" >
+            <div class="field-container" >
+              <label class="label" >
+                Email
+              </label>
+                <input
+                  class="field"
+                  type="email"
+                  id="email"
+                  name="email"
+                />
+            </div>
+            <div class="field-container">
+              <label class="label" >
+                Mot de passe
+              </label>
+                <input
+                  class="field"
+                  type="password"
+                  id="password"
+                  name="password"
+                />
+            </div>
+        </div>
+
+
+          <button  class="submit-form" type="submit">
+            Envoyer
+          </button>
+
+
+
+      </form>
+
+
+
+
+
+
+          <div  class="sub-title">
+          vous n'avez pas un compte ?
+          </div>
+        </div>
+      </div>
+    </div>
+</body>
+</html>

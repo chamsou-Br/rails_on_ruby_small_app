@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Your Page Title</title>
+  <%= stylesheet_link_tag 'home', media: 'all' %>
+  <!-- Other meta tags, stylesheets, or scripts specific to this view -->
+</head>
+<body>
+  <%= render "partials/navbar" %>
+  <div class="home-page">
+
+      <div class="header">
+        <div class="rip-container">
+          <div class="title">Total des encaissements / ventes</div>
+          <div class="content">
+            <div class="price">29040.00 DZD</div>
+            <div class="rip-id">
+              <span>PT 3900 7599 4678 5688</span>
+            </div>
+          </div>
+        </div>
+        <div class="content">
+          <div class="title">Transactions : </div>
+          <div class="list">
+            <% @transaction_status_list.each do |it| %>
+                <div style="background-color: #<%= it[:color] %>44" class="status">
+                 <div class="label">
+                    <div class="icon"><i class="<%= it[:icon] %>"></i></div>
+                    <span><%= it[:title] %></span>
+                </div>
+                <div style="color: ##{it[:color]};" class="value">
+                    <%= it[:value] %>
+                </div>
+                </div>
+            <% end %>
+          </div>
+            <br />
+          <div class="title">
+            Invitation Récentes <a href="/invitations" class="tous" >voir tous</a>
+          </div>
+          
+                <% @invitations.each do |it| %>
+                <%= render "partials/invitationCard", inv: it %>
+                 <% end %>
+        </div>
+      </div>
+    </div>
+</body>
+</html>

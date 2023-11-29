@@ -1,0 +1,392 @@
+:root {
+    --violet-color: #8762D9;
+    --violet-opacity-color: #8762D922;  
+    --blue-color: #151B26; 
+    --vert1-color: #1FA698; 
+    --vert2-color: #44F2A1; 
+    --vert2-opacity-color: #44F2A122; 
+    --gris-color : #F2F2F2;
+    --gris2-color : #a1a1a1;
+    --white-color : #FFF;
+    --white-blue-color : #F4F7FA;
+    --black-color : #010101;
+    --border-color : #01010122;
+    --danger-color : #f28585;
+    --blue2-color : rgb(81, 131, 224);
+  }
+  
+  .profile-page {
+    padding: 50px 30px;
+    overflow-x: hidden;
+    @media screen and (max-width : 1024px) {
+        padding: 50px 20px;
+    }
+    @media screen and (max-width : 767px) {
+        padding: 30px 10px;
+    }
+}
+
+.profile-page .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.profile-page .header .title {
+    font-size: 22px;
+    font-weight: bold;
+    color: var(--blue-color);
+}
+
+.profile-page .header .action {
+    background-color: var(--violet-color);
+    padding: 10px 20px;
+    font-size: 14px;
+    color: #FFF;
+    border-radius: 0.4rem;
+}
+
+.profile-page .header .action:hover {
+    opacity: 0.7;
+    cursor: pointer;
+} 
+
+.profile-page .content {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    gap: 30px;
+    margin-top: 30px;
+    @media screen and (max-width: 1024px) {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+}
+
+.profile-page .new-invitation-picture {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 500px;
+    @media screen and (max-width: 1024px) {
+        width: 650px;
+        max-width: none;
+    }
+    @media screen and (max-width: 767px) {
+        width: 550px;
+    }
+    @media screen and (max-width: 550px) {
+        width: 100%;
+    }
+}
+
+
+
+
+
+.profile-page .content .new-profile-card {
+    background-color: #FFF;
+    margin: auto;
+    border: 1px solid var(--border-color);
+    border-radius: 0.3rem;
+    padding: 0 20px;
+    padding-bottom: 20px;
+    width: 1000px;
+    @media screen and (max-width: 767px) {
+        border: none;
+        padding: 0 10px;
+    }
+    @media screen and (max-width: 550px) {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+}
+
+.profile-page .new-profile-card .error-generale {
+    width: calc(100% - 40px);
+    background-color: #e4737344;
+    color: #e47373;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 10px 20px;
+    margin: 20px 0px;
+    margin-bottom: 0px;
+    border-radius: 0.3rem;
+}
+
+.profile-page .content .new-profile-card  .sub-card {
+    padding: 20px 20px;
+    @media screen and (max-width : 550px) {
+        width: 100vw;
+    }
+
+}
+
+.profile-page .content .new-profile-card .title {
+    display: flex;
+    align-items:center ;
+    justify-content: start;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.profile-page .content .new-profile-card .title .icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+    background-color: var(--violet-opacity-color);
+    color: var(--violet-color);
+    border-radius: 0.3rem;
+    font-size: 22px;
+}
+
+
+
+
+
+.profile-page .pictures {
+    overflow-x: auto;
+    max-width: 450px;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 20px;
+}
+
+.profile-page .pictures img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border: 0.5px solid var(--border-color);
+}
+
+/* width */
+
+
+.pay-part-form-container {
+    margin-bottom: 10px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5px;
+    width: fit-content;
+    background-color: #FFF;
+    margin: auto;
+    min-width: 1000px;
+    @media screen and (max-width: 550px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+  .pay-part-form-container.vertical {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  
+  .pay-part-form-container .field-container {
+    margin: 10px 0;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .pay-part-form-container .field-container:nth-child(2n + 1) {
+    margin-right: 10px;
+    @media screen and (max-width: 550px) {
+      margin-right: 0;
+    }
+  }
+  
+  .pay-part-form-container.vertical .field-container:nth-child(2n + 1) {
+      margin-right: 0;
+  }
+  
+  .pay-part-form-container .field-container .label {
+    font-size: 14px;
+    font-weight: bold;
+    color: var(--blue-color);
+    margin-bottom: 5px;
+  }
+  
+  .pay-part-form-container .field-container .field {
+
+    outline: none;
+    font-size: 14px;
+    padding: 13px 10px;
+    font-weight: bold;
+    border: none;
+    border-radius: 0.2rem;
+    min-width: 300px;
+    max-width: 380px;
+    border: 0.5px solid var(--border-color);
+    @media screen and (max-width: 767px) {
+      max-width: 350px;
+      min-width: 250px
+    }
+    @media screen and (max-width: 400px) {
+      width: 90vw;
+    } 
+  }
+  
+  .pay-part-form-container .field-container .field option {
+    font-size: 16px;
+  }
+  .pay-part-form-container .field-container .field::placeholder {
+    font-size: 14px;
+    color: #01010133;
+  }
+  
+  .pay-part-form-container .field-container .field:focus {
+    border: 2px solid var(--violet-color);
+  }
+  
+  .pay-part-form-container .field-container .error {
+    color: #e35555;
+    font-size: 12px;
+    font-weight: bold;
+    margin-top: 5px;
+  }
+  
+  .pay-part-form .submit-form {
+    background-color: var(--violet-color);
+    padding: 15px;
+    text-align: center;
+    height: fit-content;
+    font-size: 14px;
+    padding: 13px 10px;
+    font-weight: bold;
+    border: none;
+    border-radius: 0.2rem;
+    min-width: 300px;
+    max-width: 350px;
+    color: #fff;
+    margin-top: 20px;
+    @media screen and (max-width: 767px) {
+      max-width: 350px;
+      min-width: 250px;
+      margin-top: 10px;
+    }
+    @media screen and (max-width: 550px) {
+      width: 100%;
+    } 
+    @media screen and (max-width: 400px) {
+      width: 90vw;
+      min-width: 0px;
+    }
+  }
+  .pay-part-form button:hover{
+    opacity: 0.7;
+  }
+  
+  .pay-part-form.disabled button {
+    opacity: 0.2;
+  }
+  
+  .pay-part-form button.back {
+    background-color: var(--border-color);
+    padding: 15px;
+    text-align: center;
+    height: fit-content;
+    font-size: 14px;
+    padding: 13px 10px;
+    font-weight: bold;
+    border: none;
+    border-radius: 0.2rem;
+    width: 100px;
+    color: var(--blue-color);
+    margin-top: 20px;
+    margin-right: 10px;
+  }
+  
+  .field {
+    outline: none;
+    font-size: 14px;
+    padding: 13px 10px;
+    font-weight: bold;
+    border: none;
+    border-radius: 0.2rem;
+    min-width: 300px;
+    border: 1px solid var(--border-color);
+    @media screen and (max-width: 767px) {
+      max-width: 350px;
+    }
+    @media screen and (max-width: 400px) {
+      width: 95vw;
+    }
+  }
+  
+  .field::placeholder {
+    font-size: 14px;
+    color: #01010133;
+  }
+  
+  .field:focus {
+    border: 2px solid var(--violet-color);
+  }
+  
+  .pay-part-form .checkboxes {
+    margin-top: 5px;
+  }
+  
+  .pay-part-form .checkboxes .checkbox {
+    margin-right: 20px;
+  }
+  
+  .pay-part-form .checkboxes .checkbox span {
+    margin-left: 3px;
+    font-size: 16px;
+    
+  }
+  
+  .pay-part-form .form-header{
+    display: block;
+    grid-column: span 2
+  
+  }
+  
+  
+  .pay-part-form .title {
+    display: flex;
+    align-items:center ;
+    justify-content: start;
+    gap: 10px;
+    margin-top: 20px;
+    @media screen and (max-width : 765px) {
+      margin-bottom: 0;
+  }
+  
+  
+  }
+  
+  .pay-part-form .title .icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+    background-color: var(--violet-opacity-color);
+    color: var(--violet-color);
+    border-radius: 0.3rem;
+    font-size: 22px;
+  }
+  
+  .pay-part-form  .title span {
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--blue-color);
+  }
+  
+  .pay-part-form  .sub-title {
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: normal;
+    color: var(--blue-color);
+    width: 90%;
+    line-height: 15px;
+    @media screen and (max-width : 765px) {
+      margin-bottom: 0;
+  }
+  
+  }

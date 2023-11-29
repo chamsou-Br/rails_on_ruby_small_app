@@ -1,0 +1,29 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  uuid: MyString
+  product: MyString
+  description: MyString
+  price: 9.99
+  store_wilaya: MyString
+  store_location: MyString
+  delivery_type: MyString
+  local_delivery_price: 9.99
+  active: MyString
+  delivery_delay_hours: 1
+  date: 2023-11-19 13:51:54
+  images: MyText
+
+two:
+  uuid: MyString
+  product: MyString
+  description: MyString
+  price: 9.99
+  store_wilaya: MyString
+  store_location: MyString
+  delivery_type: MyString
+  local_delivery_price: 9.99
+  active: MyString
+  delivery_delay_hours: 1
+  date: 2023-11-19 13:51:54
+  images: MyText

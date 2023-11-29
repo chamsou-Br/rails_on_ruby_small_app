@@ -1,0 +1,176 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Your Page Title</title>
+  <%= stylesheet_link_tag 'newInvitation', media: 'all' %>
+  <!-- Other meta tags, stylesheets, or scripts specific to this view -->
+</head>
+<body>
+  <%= render "partials/navbar" %>
+        <div class="new-invitation-page">
+        <div class="header">
+          <div class="title">Nouvelle Announce</div>
+        </div>
+        <div class="content">
+          <div class="new-invitation-card">
+          <% if flash[:alert].present? %>
+            <div class="error-generale">
+                <%= flash[:alert] %>
+            </div>
+        <% end %>
+
+            <form class="pay-part-form"  action="<%= invitations_path %>" method="post" >
+
+
+              <%= hidden_field_tag :seller_id, session[:user_id] %>
+              <%= hidden_field_tag :date, Time.now %>
+              <div class="pay-part-form-container">
+                <div class="form-header">
+                  <div class="title">
+                    <div class="icon-container">
+                      <i class="fa-solid fa-user"></i>
+                    </div>
+                    <span>Description du produit</span>
+                  </div>
+
+                  <div class="sub-title">des different champ ou vous pouvez entrer des information présentatif de votre produit . un champ de description , un titre de produit et enfin le prix de produit</div>
+                </div>
+
+                <div class="field-container" >
+                  <label class="label" htmlFor={field.name}>
+                    Produit
+                  </label>
+
+                  <input
+                    class="field"
+                    type="text"
+                    id="product"
+                    name="product"
+                  />
+                </div>
+                <div class="field-container" >
+                  <label class="label" htmlFor={field.name}>
+                    image
+                  </label>
+
+                  <input
+                    class="field"
+                    type="text"
+                    id="images"
+                    name="images"
+                  />
+                </div>
+                <div class="field-container" >
+                  <label class="label" htmlFor={field.name}>
+                    Prix
+                  </label>
+
+                  <input
+                    class="field"
+                    type="number"
+                    id="price"
+                    name="price"
+                  />
+                </div>
+                <div class="field-container" >
+                  <label class="label" htmlFor={field.name}>
+                    Description
+                  </label>
+
+                  <input
+                    class="field"
+                    type="text"
+                    id="description"
+                    name="description"
+                  />
+                </div>
+                <div class="field-container" >
+                  <label class="label" htmlFor={field.name}>
+                    Magasin wilaya
+                  </label>
+
+                  <input
+                    class="field"
+                    type="text"
+                    id="store_wilaya"
+                    name="store_wilaya"
+                  />
+                </div>
+
+                <div class="field-container" >
+                  <label class="label" htmlFor={field.name}>
+                    Emplacement de magasin
+                  </label>
+
+                  <input
+                    class="field"
+                    type="text"
+                    id="store_location"
+                    name="store_location"
+                  />
+                </div>
+
+                <div class="form-header">
+                  <div class="title">
+                    <div class="icon-container">
+                      <i class="fa-solid fa-user"></i>
+                    </div>
+                    <span>Livraison du produit</span>
+                  </div>
+
+                  <div class="sub-title"></div>
+                </div>
+
+                <div class="field-container" >
+                  <label class="label" htmlFor={field.name}>
+                    Type de laivraison
+                  </label>
+
+                  <input
+                    class="field"
+                    type="text"
+                    id="delivery_type"
+                    name="delivery_type"
+                  />
+                </div>
+
+                <div class="field-container" >
+                  <label class="label" htmlFor={field.name}>
+                    prix de local laivraiosn
+                  </label>
+
+                  <input
+                    class="field"
+                    type="number"
+                    id="local_delivery_price"
+                    name="local_delivery_price"
+                  />
+                </div>
+                                <div class="field-container" >
+                  <label class="label" htmlFor={field.name}>
+                    Délai de livraison en heures
+                  </label>
+
+                  <input
+                    class="field"
+                    type="number"
+                    id="delivery_delay_hours"
+                    name="delivery_delay_hours"
+                  />
+                </div>
+                <br />
+              <button class="submit-form" type="submit">
+                Ajout Announce
+              </button>
+
+
+              </div>
+
+
+            </form>
+          </div>
+        </div>
+      </div>
+</body>
+</html>

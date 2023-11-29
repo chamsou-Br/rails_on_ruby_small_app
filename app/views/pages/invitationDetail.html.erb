@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Your Page Title</title>
+  <%= stylesheet_link_tag 'invitation_detail', media: 'all' %>
+  <!-- Other meta tags, stylesheets, or scripts specific to this view -->
+</head>
+<body>
+<%= render "partials/navbar" %>
+  <div class="invitation-page">
+              <div class='invitation-page-header'>
+          <div class="header-page">
+      <div class="header-left">
+        <div class="title">Annonce <%= @invitation.uuid %> </div>
+        <div class="descr">Tous les information et les transactio de cette announce</div>
+      </div>
+
+
+        <div class="header-right">
+          <div class="search-icon-container">
+            +
+          </div>
+          <div class="search-bar-container">
+            <input
+
+              placeholder="Search uuid"
+            />
+          </div>
+        </div>
+    </div>
+      </div>
+        <div class="invitation-page-content">
+          <%= render "partials/invitationCard", inv: @invitation %>
+          <br />
+          <div class="transaction-list">
+            <div class="header" >
+              <span>code transaction</span>
+              <span>date de création</span>
+              <span>État</span>
+              <span>Prix de laivraison</span>
+              <span>date de payment</span>
+              <span>livraison</span>
+            </div>
+         <% @transactions.each do |tr| %>              
+              <div class="transaction-item">
+              <span><%= tr.id %></span>
+              <span><%= tr.created_at%></span>
+              <span ><%= tr.state %></span>
+              <span><%= tr.delivery_price%></span>
+              <span><%= tr.payment_date %></span>
+              <span><%= tr.delivery_place%></span>
+              </div>
+            <% end %>
+        </div>
+      </div>
+</body>
+</html>
