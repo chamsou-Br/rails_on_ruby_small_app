@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   root 'pages#home'
   get 'login', to: 'pages#login'
   post '/login', to: 'auth#login'
+  get '/logout', to: 'auth#logout'
   get "profile" , to: "pages#profile"
   get 'register', to: 'pages#register'
   get 'invitations', to: 'pages#invitations'
