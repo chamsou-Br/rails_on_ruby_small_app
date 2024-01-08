@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get "profile" , to: "pages#profile"
   get 'register', to: 'pages#register'
   get 'invitations', to: 'pages#invitations'
+  get 'invitations/search/:id', to: 'pages#invitationsSearch', as: 'invitations_search'
   get 'transactions', to: 'pages#transactions'
   get "new" , to: "pages#newInvitation"
   get 'invitations/:id', to: 'pages#invitationDetail', as: 'invitation_detail'

@@ -15,19 +15,8 @@
         <div class="title">Announces</div>
         <div class="descr">List de tous les anounces</div>
       </div>
-
-
         <div class="header-right">
-          <div id="search-icon-container" class="search-icon-container">
-            +
-          </div>
-          <div class="search-bar-container">
-            <input
-              name="search"
-              placeholder="Search by name"
-              id="searchInput"
-            />
-          </div>
+          
         </div>
     </div>
       </div>
@@ -45,24 +34,15 @@
                 <%= render "partials/invitationCard", inv: it %>
                  </a>
                  <% end %>
+                 <% if @invitations.length == 0 %>
+                     <div>No invitations found</div>
+                  <% end %>
+
                 
-
-
       </div>  
     </div>
 </body>
 <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const searchInput = document.getElementById("searchInput");
-    const searchDiv = document.getElementById("search-icon-container");
-
-    // Add an event listener to the div
-    searchDiv.addEventListener("click", function () {
-      const inputValue = searchInput.value;
-    console.log("mfl;")
-      // Update the window location based on the input value
-      window.location.href = "/invitations/search/" + inputValue;
-    });
-  });
+  
 </script>
 </html>

@@ -52,6 +52,16 @@ class PagesController < ApplicationController
     puts "Number of Invitations: #{all_invitations.length}"
   end
 
+  def invitationsSearch
+    @invitations = Invitation.search_by_default(params[:id]).records.to_a
+
+    puts "inv "
+    all_invitations = @invitations
+
+    # Print the length of the invitations
+    puts "Number of Invitations: #{all_invitations.length}"
+  end
+
   def newInvitation
   
   end

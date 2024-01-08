@@ -18,13 +18,14 @@
 
 
         <div class="header-right">
-          <div class="search-icon-container">
+          <div id="search-icon-container" class="search-icon-container">
             +
           </div>
           <div class="search-bar-container">
             <input
-
-              placeholder="Search uuid"
+              name="search"
+              placeholder="Search by name"
+              id="searchInput"
             />
           </div>
         </div>
@@ -55,4 +56,19 @@
         </div>
       </div>
 </body>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    console.log("sksndlcksn")
+    const searchInput = document.getElementById("searchInput");
+    const searchDiv = document.getElementById("search-icon-container");
+
+    // Add an event listener to the div
+    searchDiv.addEventListener("click", function () {
+      const inputValue = searchInput.value;
+    console.log("mfl;")
+      // Update the window location based on the input value
+      window.location.href = "/invitations/search/" + inputValue;
+    });
+  });
+</script>
 </html>

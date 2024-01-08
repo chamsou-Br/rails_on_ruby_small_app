@@ -1,0 +1,10 @@
+version: '3.8'
+
+services:
+  elasticsearch:
+    image: elasticsearch:2.4
+    environment:
+      - discovery.type=single-node
+    ports:
+      - "127.0.0.1:9200:9200"
+      - "127.0.0.1:9300:9300"
