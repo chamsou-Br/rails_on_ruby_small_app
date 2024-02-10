@@ -9,6 +9,9 @@ Rails.application.routes.draw do
   get 'transactions', to: 'pages#transactions'
   get "new" , to: "pages#newInvitation"
   get 'invitations/:id', to: 'pages#invitationDetail', as: 'invitation_detail'
+  get 'export/users', to: 'pages#exportUsers' , as: 'export_users'
+  get 'export/roles', to: 'pages#exportRoles' , as: 'export_roles'
+  get 'export/resource', to: 'pages#exportResource' , as: 'export_resource'
 
   resources :invitations, only: [:create]
   resources :sellers, only: [:create]

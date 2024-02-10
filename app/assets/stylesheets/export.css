@@ -1,0 +1,130 @@
+
+.export-page .export-page-content{
+    display: flex;
+    flex-direction: column ;
+    align-items: center;
+    margin-top: 40px;
+    width: 100%;
+}
+
+.export-page .export-page-header {
+    width: calc(100%);
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    @media screen and (max-width: 700px) {
+        padding: 0px 10px;
+    }
+
+}
+
+.export-page .export-page-content .export-list {
+    width: 100%;
+    border: 1px solid var(--border-color);
+    border-radius: 0.3rem;
+    font-size: 14px;
+    @media screen and (max-width : 1024px) {
+        font-size: 12px;
+    }
+    @media screen and (max-width : 700px) {
+        font-size: 10px;
+    }
+    @media screen and (max-width : 500px) {
+        font-size: 8px;
+    }
+}
+
+.export-page .export-list .header {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     background-color: var(--white-blue-color);
+     color: var(--blue-color);
+     padding: 15px 20px;
+}
+
+.export-page .export-list .header span {
+    width: calc(20%);
+   
+}
+.export-page .export-list .header span:nth-child(5) {
+    @media screen and (max-width : 767px) {
+        display: none;
+    }
+}
+
+.export-page .export-page-content .export-list .transaction-item {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    border-bottom: 0.1px solid var(--gris-color);
+}
+
+.export-page .export-page-content .export-list .transaction-item:hover {
+    cursor: pointer;
+    background-color: var(--white-blue-color);
+}
+
+.export-page .export-page-content .export-list .transaction-item span {
+    width: 20%;
+}
+
+.export-page .export-page-content .export-list .transaction-item span:nth-child(5) {
+    @media screen and (max-width : 767px) {
+        display: none;
+    }
+}
+
+
+
+
+
+.export-page .export-page-content .export-list-header {
+    display: flex;
+    overflow-x: auto;
+    width: 100%;
+    margin: 40px 0 ;
+    @media screen and (max-width: 968px) {
+        padding-bottom: 20px;
+            margin: 0 60px;
+            font-size: 14px;
+    }
+    @media screen and (max-width : 500px) {
+        font-size: 8px;
+    }
+
+
+}
+
+.export-page .export-page-content .export-list-header::-webkit-scrollbar {
+    width: 10px; 
+    height: 3px;/* Width of the scrollbar */
+  }
+  
+  /* Customize the scrollbar thumb (the draggable part) */
+  .export-page .export-page-content .export-list-header::-webkit-scrollbar-thumb {
+    background: var(--blue-color); /* Color of the thumb */
+  }
+  
+  /* Customize the scrollbar track on hover */
+  .export-page .export-page-content .export-list-header::-webkit-scrollbar-track:hover {
+    background: #999;
+  }
+
+.export-page .export-page-content .export-list-header > div {
+    justify-content: flex-start;
+    margin-right: 20px;
+    padding: 15px 10px;
+    cursor: pointer;
+    width: fit-content;
+    min-width: fit-content;
+
+}
+
+
+
+.export-page .export-page-content .export-list-header > div.active {
+    border-bottom: 2px solid var(--vert2-color);
+    color: var(--vert2-color);
+} 

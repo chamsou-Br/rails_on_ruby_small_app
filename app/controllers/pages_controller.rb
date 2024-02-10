@@ -1,4 +1,9 @@
 class PagesController < ApplicationController
+
+  require 'net/http'
+  require 'json'
+
+
   def home
     @transaction_status_list = [
       {
@@ -72,4 +77,52 @@ class PagesController < ApplicationController
   def profile
   @seller = Seller.find(session[:user_id])
   end
+
+  def exportUsers
+    url = URI.parse('http://localhost:3000/export/user?email=developer@pyx4.com&password=Abcd123456') 
+    http = Net::HTTP.new(url.host, url.port)
+    http.use_ssl = (url.scheme == 'https')
+
+    request = Net::HTTP::Get.new(url)
+    response = http.request(request)
+
+    if response.code == '200'
+      @data = JSON.parse(response.body)
+    else
+      @error_message = "Failed to fetch data. HTTP Status: #{response.code}"
+    end
+  end
+
+  def exportRoles
+    url = URI.parse('http://localhost:3000/export/role?email=developer@pyx4.com&password=Abcd123456') 
+    http = Net::HTTP.new(url.host, url.port)
+    http.use_ssl = (url.scheme == 'https')
+
+    request = Net::HTTP::Get.new(url)
+    response = http.request(request)
+
+    if response.code == '200'
+      @data = JSON.parse(response.body)
+    else
+      @error_message = "Failed to fetch data. HTTP Status: #{response.code}"
+    end
+  end
+
+  def exportResource 
+    url = URI.parse('http://localhost:3000/export/resource?email=developer@pyx4.com&password=Abcd123456') 
+    http = Net::HTTP.new(url.host, url.port)
+    http.use_ssl = (url.scheme == 'https')
+
+    request = Net::HTTP::Get.new(url)
+    response = http.request(request)
+
+    if response.code == '200'
+      @data = JSON.parse(response.body)
+    else
+      @error_message = "Failed to fetch data. HTTP Status: #{response.code}"
+    end
+  end
+
+
+
 end

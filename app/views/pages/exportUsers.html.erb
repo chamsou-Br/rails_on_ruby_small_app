@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Your Page Title</title>
+  <%= stylesheet_link_tag 'invitation_detail', media: 'all' %>
+  <!-- Other meta tags, stylesheets, or scripts specific to this view -->
+</head>
+<body>
+<%= render "partials/navbar" %>
+    <div class="export-page" >
+        <div class="export-page-content">
+        <br />
+                  <div class="export-list">
+            <div class="header" >
+              <span>Name</span>
+              <span>mobile phone</span>
+              <span>roles</span>
+              <span>service</span>
+              <span>gendre </span>
+              <span>language</span>
+              <span>URL</span>
+            </div>
+         <% @data["data"].each do |tr| %>              
+              <div class="transaction-item">
+              <span><%= tr["lastname"]  %> <%= tr["firstname"]  %></span>
+              <span><%= tr["mobile_phone"]%></span>
+              <span><%= tr["roles"] %></span>
+              <span ><%= tr["service"] %></span>
+              <span><%= tr["gender"] %></span>
+              <span><%= tr["language"] %></span>
+              <span><%= tr["URL"] %></span>
+              </div>
+            <% end %>
+        </div>
+      </div>
+    </div>
+</body>
+</html>
